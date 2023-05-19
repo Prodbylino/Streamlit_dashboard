@@ -112,7 +112,7 @@ with right_column:
 st.markdown("---")
 
 # # Sales by product line
-sales_by_product_line = df_selection.groupby(by=["Product line"]).sum()[["Total"]].sort_values(by="Total")
+sales_by_product_line = df_selection.groupby(by=["Product line"])[["Total"]].sum().sort_values(by="Total")
 
 fig_product_sales = px.bar(
 
